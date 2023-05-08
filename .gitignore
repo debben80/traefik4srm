@@ -1,3 +1,5 @@
-.idea
-package.sh
-Traefik4srm.spk
+BUILD
+src/INFO
+src/package.tgz
+Traefik4SRM-*.spk
+traefik/
