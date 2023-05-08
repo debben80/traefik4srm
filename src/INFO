@@ -1,7 +1,0 @@
-package="Traefik4SRM"
-version="2.10.1-0003"
-maintainer="Debben80"
-maintainer_url="https://github.com/debben80/traefik4srm"
-arch="cypress"
-description="Traefik 2.10.1 for SRM"
-displayname="Traefik for SRM"
