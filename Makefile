@@ -33,7 +33,7 @@ build_spk: clean src/INFO src/package.tgz
 
 clean:
 	rm -f src/INFO src/package.tgz
-	rm -rf traefik/ src/usr/
+	rm -rf traefik/
 
 clean_spk:
 	rm -f $(PACKAGE_NAME)-*.spk
