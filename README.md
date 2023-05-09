@@ -10,4 +10,4 @@ Traefik 4 SRM is an **unofficial** package for running [Traefik](https://github.
 
 ### How To
 
-* [Traefik example config files](https://github.com/ogero/traefik4srm/blob/main/examples/README.md)
+* [Traefik example config files](examples/README.md)
