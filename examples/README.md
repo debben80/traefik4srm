@@ -31,5 +31,5 @@ Make sure you've configured all of the following rules on SRM and added your dom
 
 ### Traefik example config files
 
-* [_/volumeUSB1/usbshare1-2/traefik/static.yaml_](https://github.com/ogero/traefik4srm/blob/main/examples/static.yaml)
-* [_/volumeUSB1/usbshare1-2/traefik/dynamic.yaml_](https://github.com/ogero/traefik4srm/blob/main/examples/dynamic.yaml)
+* [_/volumeUSB1/usbshare1-2/traefik/static.yaml_](examples/static.yaml)
+* [_/volumeUSB1/usbshare1-2/traefik/dynamic.yaml_](examples/dynamic.yaml)
