@@ -28,8 +28,8 @@ src/package.tgz: traefik/usr/bin/traefik
 	cd traefik && tar -czf ../$@ usr/
 
 build_spk: clean src/INFO src/package.tgz
-	rm -f $(PACKAGE_NAME)-$(PACKAGE_ARCH).spk
-	cd src && tar -cf ../$(PACKAGE_NAME)-$(PACKAGE_ARCH).spk *
+	rm -f $(PACKAGE_NAME)-$(TRAEFIK_VERSION)-$(PACKAGE_REV)-${PACKAGE_ARCH// /.}.spk
+	cd src && tar -cf ../$(PACKAGE_NAME)-$(TRAEFIK_VERSION)-$(PACKAGE_REV)-${PACKAGE_ARCH// /.}.spk *
 
 clean:
 	rm -f src/INFO src/package.tgz
