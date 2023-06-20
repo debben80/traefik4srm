@@ -1,3 +1,5 @@
+SHELL := /bin/bash
+SPACE := $(subst ,, )
 PACKAGE_NAME = Traefik4SRM
 PACKAGE_REV = 0003
 TRAEFIK_VERSION = 2.10.3
@@ -28,8 +30,8 @@ src/package.tgz: traefik/usr/bin/traefik
 	cd traefik && tar -czf ../$@ usr/
 
 build_spk: clean src/INFO src/package.tgz
-	rm -f $(PACKAGE_NAME)-$(TRAEFIK_VERSION)-$(PACKAGE_REV)-${PACKAGE_ARCH// /.}.spk
-	cd src && tar -cf ../$(PACKAGE_NAME)-$(TRAEFIK_VERSION)-$(PACKAGE_REV)-${PACKAGE_ARCH// /.}.spk *
+	rm -f "$(PACKAGE_NAME)-$(TRAEFIK_VERSION)-$(PACKAGE_REV)-$(subst $(SPACE),_,$(PACKAGE_ARCH)).spk"
+	cd src && tar -cf "../$(PACKAGE_NAME)-$(TRAEFIK_VERSION)-$(PACKAGE_REV)-$(subst $(SPACE),_,$(PACKAGE_ARCH)).spk" *
 
 clean:
 	rm -f src/INFO src/package.tgz
