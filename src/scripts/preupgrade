@@ -1,4 +1,22 @@
 #!/bin/sh
 # Copyright (C) 2000-2013 Synology Inc. All rights reserved.
+. $(dirname $0)/common
+
+if [ "$SYNOPKG_PKG_STATUS" = "UPGRADE" ]; then
+
+    TRAEFIK_CONFIG_FILE="traefik4srm.conf"
+    TRAEFIK_CONFIG="${SYNOPKG_PKGDEST}/${TRAEFIK_CONFIG_FILE}"
+    TRAEFIK_USER="$(echo "${SYNOPKG_PKGNAME}" | awk '{print tolower($_)}')"
+    LOG="${SYNOPKG_PKGDEST}/${TRAEFIK_USER}.log"
+
+    echo "[$(date +'%T')] #### Start preinst... ####" >>"${LOG}"
+
+    echo "[$(date +'%T')] Save Config" >>"${LOG}"
+
+    cp -p "${TRAEFIK_CONFIG}" "/tmp/${TRAEFIK_CONFIG_FILE}"
+
+    echo "[$(date +'%T')] #### Done preinst ####" >>"${LOG}"
+
+fi
 
 exit 0
